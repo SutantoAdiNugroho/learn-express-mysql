@@ -2,7 +2,7 @@ const {connection} = require("../../config")
 
 module.exports = {
     getAll: (req, res) => {
-        connection.query(`select * from todo`, (error, results, fields) => {
+        connection.query(`select * from todo where email = ?`, req.params.email ,(error, results, fields) => {
             if (error) {
                 res.status(500).send({ message: "Theres is something error"})
             } else {
@@ -15,6 +15,7 @@ module.exports = {
     },
     addOne: (req, res) => {
         connection.query("insert into todo SET ?", req.body, (error, results, fields) => {
+            console.log(req.body)
                 if (error) {
                     console.log(error);
                     res.status(500).send({message: "Theres is something error"})
