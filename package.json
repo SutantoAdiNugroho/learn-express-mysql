@@ -12,5 +12,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
-  }
+  },
+  "name": "learn-express-mysql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SutantoAdiNugroho/learn-express-mysql.git",
+  "author": "SutantoAdiNugroho <adi.nugroho.an836@gmail.com>",
+  "license": "MIT"
 }
